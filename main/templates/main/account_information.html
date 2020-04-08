@@ -1,0 +1,12 @@
+{% extends 'main/_base.html' %}
+{% block title %}Account information{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h2>Personal Information</h2>
+  <p>My addresses: <a href="{% url 'address_list' %}">Here</a></p>
+  <h2>Security</h2>
+  <p>Email change: <a href="{% url 'account_email' %}">Here</a></p>
+  <p>Password change: <a href="{% url 'account_change_password' %}">Here</a></p>
+</div>
+{% endblock %}

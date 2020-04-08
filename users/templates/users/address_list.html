@@ -1,0 +1,30 @@
+{% extends "main/_base.html" %}
+{% block title %}Address{% endblock %}
+{% block content %}
+<div class="container">
+
+<h1>List of your addresses: </h1>
+{% for address in object_list %}
+<p>Name: {{address.name}}</p>
+<p>Address1: {{address.address1}}</p>
+<p>Address2: {{address.address2}}</p>
+<p>City: {{address.city}}</p>
+<p>Country: {{address.get_country_display}}</p>
+
+  <p>
+    <a href="{% url 'address_update' address.id %}">Update address</a>
+  </p>
+
+<p>
+  <a href="{% url 'address_delete' address.id  %}">Delete address</a>
+</p>
+
+{% if not forloop.last %}
+<hr>
+{% endif %}
+{% endfor %}
+<p>
+  <a href="{% url 'address_create' %}">Add new address</a>
+</p>
+</div>
+{% endblock %}

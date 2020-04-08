@@ -1,0 +1,17 @@
+{% extends "main/_base.html" %}
+{% block title %}Addres select{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Select the billing and shipping address.</h2>
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" name="button" class="btn btn-primary">Submit</button>
+    <a href="{% url 'address_create' %}" class="btn btn-primary">Add a new one</a>
+  </form>
+</div>
+
+
+{% endblock %}

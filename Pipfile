@@ -1,0 +1,35 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+psycopg2-binary = "*"
+pillow = "*"
+django-allauth = "*"
+selenium = "*"
+django-extensions = "*"
+pydotplus = "*"
+ipython = "*"
+graphviz = "*"
+factory-boy = "*"
+django-debug-toolbar = "*"
+djangorestframework = "*"
+django-filter = "*"
+weasyprint = "*"
+channels = "*"
+channels-redis = "*"
+aioredis = "*"
+aiohttp = "*"
+twisted = {extras = ["http2", "tls"],version = "*"}
+django-crispy-forms = "*"
+whitenoise = "*"
+django-heroku = "*"
+idna-ssl = "*"
+django-environ = "*"
+
+[requires]
+python_version = "3.8"

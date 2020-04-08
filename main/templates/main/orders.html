@@ -1,0 +1,16 @@
+{% extends 'main/_base.html' %}
+{% block title %}All orders{% endblock %}
+{% block content %}
+<div class="container">
+<h3>Your orders</h3>
+<hr>
+{% for order in object_list %}
+<h4>Order ID: {{order.id}}</h4>
+  <h5>Products: </h5>
+  <h6>{{order.summary}}</h6>
+<h4>Total price: ${{order.total_price}}</h4>
+<p>If you have a question about your order number {{order.id}}, ask our customer service department: <a href="{% url 'cs_chat' order.id %}">Here</a></p><br><br>
+{% endfor %}
+
+</div>
+{% endblock %}

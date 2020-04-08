@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <input
+     type="number"
+     name="{{ widget.name }}"
+     class="form-control quantity-number"
+     value="{{ widget.value }}"
+     min="1"
+     max="10"
+     {% include "django/forms/widgets/attrs.html" %}/>
+
+      <button
+         type="button"
+         class="btn btn-danger btn-number btn-minus"
+         data-type="minus"
+         data-field="{{ widget.name }}">
+         -
+      </button>
+
+      <button
+         type="button"
+         class="btn btn-success btn-number btn-plus"
+         data-type="plus"
+         data-field="{{ widget.name }}">
+         +
+      </button>
+  </body>
+</html>

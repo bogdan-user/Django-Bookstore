@@ -1,6 +1,5 @@
 # Django-Bookstore
 
-# Django-Bookstore
 Bookstore 
 This is an e-commerce website for a fictional company named Bookstore that sells books.
 
